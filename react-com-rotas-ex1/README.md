@@ -8,7 +8,7 @@ Nessa atividade você vão ler a documentação do react-router e ler um artigo 
 
 ## Como rodar o exercício:
 
-Na pasta desse exercício, execute o comando `npm start`.
+Na pasta desse exercício, execute o comando `npm install`, e em seguida, o comando `npm start`.
 
 ---
 
