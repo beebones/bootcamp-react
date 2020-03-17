@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './App.css'
 import Card from './components/Card'
-
+import logo from './logo.png'
 
 function App() {  
   const [filmes, setFilmes] = useState([])
@@ -20,8 +20,10 @@ function App() {
 console.log(filmes)
   return (
     <div className="App">
+      <header id="banner-header">
+        <img alt="Logo Studio Ghibli" className="App-logo" src={logo}></img>
+      </header>
     {filmes.map(({title, description}) => (
-    
       <Card titulo={title} descricao={description}/>
     ))} 
     </div>   
