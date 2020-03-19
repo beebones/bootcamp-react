@@ -7,7 +7,7 @@ import Sobre from './Sobre';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <Suspense fallback={null}>
+    <Suspense fallback="Carregando, por favor aguarde.">
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact={true} component={App} />
