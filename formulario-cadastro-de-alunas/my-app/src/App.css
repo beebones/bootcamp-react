@@ -1,0 +1,15 @@
+.form-input-container {
+  margin-bottom: 12px;
+}
+
+.input {
+  font-size: 12px;
+  margin-right: 12px;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  display: block;
+}
+
+.App {
+  padding: 10px;
+}
