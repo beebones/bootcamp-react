@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+input.Form-Field {
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+span.Form-Error {
+  display: block;
+  color: red;
+  font-size: 12px;
+}
+
+button {
+  margin: 15px;
+}
