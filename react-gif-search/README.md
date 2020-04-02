@@ -7,13 +7,13 @@
 Clone este projeto:
 
 ```
-https://github.com/beebones/bootcamp-react/tree/master/react-gif-search/
+git clone https://github.com/beebones/bootcamp-react.git
 ```
 
 Instale as dependências e rode com:
 
 ```
-cd react-gif-search
+cd bootcamp-react/react-gif-search
 yarn install
 yarn start
 ```
