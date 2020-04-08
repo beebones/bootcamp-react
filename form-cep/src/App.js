@@ -3,17 +3,16 @@ import './App.css';
 
 function App() {
   const [ endereco, setEndereco ] = useState({cep: "", logradouro: "", complemento: "", bairro: "", localidade: "", uf: "", unidade: ""});
-	const recebeAPI = () => {
-    console.log(endereco.cep)
-		const URL_DA_API = 'http://viacep.com.br/ws/'+endereco.cep+'/json/';
+	const recebeAPI = (cep) => {
+		const URL_DA_API = `http://viacep.com.br/ws/${cep}/json/`;
 		fetch(URL_DA_API)
 			.then((res) => res.json())
 			.then((data) => {
 				setEndereco(data);
 			})
 			.catch((err) => console.log(err));
-	};
-	console.log(endereco);
+  };
+  
 	return (
 		<div className="App">
 			<form>
@@ -22,12 +21,10 @@ function App() {
 					<input
 						type="text"
             value={endereco.cep}
+            placeholder="00000-000"
 						onChange={(e) => {
-              console.log(e);
-              if(endereco.cep.length === 8) {
-                recebeAPI()
-              }
-							setEndereco({
+                recebeAPI(e.target.value)
+							  setEndereco({
                 ...endereco,
 								cep: e.target.value
 							});
@@ -39,7 +36,7 @@ function App() {
 						type="text"
 						value={endereco.logradouro}
 						onChange={(e) => {
-							console.log(e);
+              recebeAPI(e.target.value)
 							setEndereco({
                 ...endereco,
 								logradouro: e.target.value
@@ -52,7 +49,7 @@ function App() {
 						type="text"
 						value={endereco.complemento}
 						onChange={(e) => {
-							console.log(e);
+              recebeAPI(e.target.value)
 							setEndereco({
                 ...endereco,
 								complemento: e.target.value
@@ -65,7 +62,7 @@ function App() {
 						type="text"
 						value={endereco.bairro}
 						onChange={(e) => {
-							console.log(e);
+              recebeAPI(e.target.value)
 							setEndereco({
                 ...endereco,
 								bairro: e.target.value
@@ -78,7 +75,7 @@ function App() {
 						type="text"
 						value={endereco.localidade}
 						onChange={(e) => {
-							console.log(e);
+              recebeAPI(e.target.value)
 							setEndereco({
                 ...endereco,
 								localidade: e.target.value
@@ -91,7 +88,7 @@ function App() {
 						type="text"
 						value={endereco.uf}
 						onChange={(e) => {
-							console.log(e);
+              recebeAPI(e.target.value)
 							setEndereco({
                 ...endereco,
 								uf: e.target.value
@@ -104,7 +101,7 @@ function App() {
 						type="text"
 						value={endereco.unidade}
 						onChange={(e) => {
-							console.log(e);
+              recebeAPI(e.target.value)
 							setEndereco({
                 ...endereco,
 								unidade: e.target.value
